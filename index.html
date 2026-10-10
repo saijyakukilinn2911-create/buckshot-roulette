@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buckshot Roulette</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar panel">
+        <div class="brand-box">
+          <div class="brand-mark">✦</div>
+          <div>
+            <div class="eyebrow">RUSTED AMMO</div>
+            <h1>Buckshot Roulette</h1>
+          </div>
+        </div>
+        <div id="turnBadge" class="turn-badge player">Player Turn</div>
+      </header>
+
+      <main class="main-grid">
+        <section class="panel stats-panel">
+          <div class="stat-row">
+            <div class="stat-col">
+              <div class="label">PLAYER</div>
+              <div class="hp-bar">
+                <span id="playerHpBar"></span>
+              </div>
+              <div class="hp-text"><strong id="playerHpValue">5</strong> / 5</div>
+            </div>
+
+            <div class="mid-info">
+              <div class="round-pill">Round <span id="roundValue">1</span></div>
+              <div class="money-pill">$<span id="moneyValue">7</span></div>
+            </div>
+
+            <div class="stat-col right">
+              <div class="label">RIVAL</div>
+              <div class="hp-bar enemy">
+                <span id="enemyHpBar"></span>
+              </div>
+              <div class="hp-text"><strong id="enemyHpValue">5</strong> / 5</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel game-panel">
+          <div class="gun-head">
+            <span>Shotgun</span>
+            <span id="chamberText">Chamber 1</span>
+          </div>
+
+          <div id="chamber" class="chamber"></div>
+
+          <div class="controls">
+            <button id="fireBtn" class="action-btn primary">Fire</button>
+            <button id="spinBtn" class="action-btn">Spin</button>
+            <button id="reloadBtn" class="action-btn">Reload</button>
+            <button id="quitBtn" class="action-btn danger">Surrender</button>
+          </div>
+        </section>
+
+        <aside class="side-stack">
+          <section class="panel shop-panel">
+            <h2>Shop</h2>
+            <div class="shop-list">
+              <button class="shop-item" data-item="medkit">
+                <span>Medkit</span>
+                <strong>$4</strong>
+              </button>
+              <button class="shop-item" data-item="armor">
+                <span>Armor</span>
+                <strong>$5</strong>
+              </button>
+              <button class="shop-item" data-item="hotload">
+                <span>Hot Load</span>
+                <strong>$6</strong>
+              </button>
+              <button class="shop-item" data-item="salve">
+                <span>Salve</span>
+                <strong>$3</strong>
+              </button>
+            </div>
+          </section>
+
+          <section class="panel inventory-panel">
+            <h2>Loadout</h2>
+            <ul id="inventoryList"></ul>
+          </section>
+        </aside>
+      </main>
+
+      <section class="panel log-panel">
+        <div class="log-header">
+          <h2>Table Log</h2>
+          <button id="newGameBtn" class="new-game-btn">New Match</button>
+        </div>
+        <div id="log" class="log"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
